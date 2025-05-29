@@ -45,6 +45,11 @@
             bindings = <&kp LS(SLASH)>;
             key-positions = <32 33>;
         };
+
+        switcher {
+            bindings = <&kp LA(LG(TAB))>;
+            key-positions = <8 9>;
+        };
     };
 
     macros {
@@ -75,7 +80,7 @@
 &kp Q      &kp W         &kp E         &kp R  &kp T                                                                      &kp Y        &kp U  &kp I      &kp O  &kp P
 &kp A      &kp S         &kp D         &kp F  &kp G  &kp LS(LG(NUMBER_3))                 &mt LCTRL LG(RIGHT_BRACKET)    &kp H        &kp J  &kp K      &kp L  &kp SEMICOLON
 &kp Z      &kp X         &kp C         &kp V  &kp B  &mt LEFT_SHIFT LS(LG(NUMBER_9))      &mt LEFT_ALT LG(LEFT_BRACKET)  &kp N        &kp M  &mkp LCLK  &mo 5  &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 4  &mo 3  &lt 5 SPACE                          &kp LEFT_SHIFT                 &lt 2 ENTER                           &kp BACKSPACE
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 0  &mo 3  &lt 5 SPACE                          &kp LEFT_SHIFT                 &lt 2 ENTER                           &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -108,12 +113,12 @@
             >;
         };
 
-        FUNCTION {
+        Function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&none   &none          &none          &none          &none                                                &kp F1         &kp F2   &kp F3   &kp F4   &kp LC(LG(P))
+&none   &kp LC(LG(S))  &none          &kp LC(LG(F))  &none          &none                  &none          &kp F5         &kp F6   &kp F7   &kp F8   &none
+&none   &none          &kp LC(LG(C))  &kp LC(LG(V))  &kp LC(LG(B))  &kp LS(LC(LG(B)))      &none          &kp F9         &kp F10  &kp F11  &kp F12  &none
+&trans  &trans         &trans         &trans         &trans         &trans                 &kp LG(SPACE)  &kp LA(SPACE)                             &trans
             >;
         };
 
@@ -123,15 +128,6 @@
 &none   &kp LA(LC(T))      &kp LA(LC(S))      &kp LA(LC(B))      &kp LA(LC(F))      &kp LS(LC(LG(D)))      &kp LA(LC(TAB))  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(J))       &kp LC(LG(K))  &kp LC(LG(RIGHT_ARROW))  &none
 &none   &kp LS(LA(LC(F)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(P)))  &kp LS(LA(LC(D)))  &kp LS(LC(LG(J)))      &kp LC(LG(T))    &kp LC(LG(COMMA))       &kp LC(LG(PERIOD))  &none          &none                    &none
 &trans  &trans             &trans             &trans             &trans             &trans                 &trans           &kp LC(LG(ENTER))                                                                   &trans
-            >;
-        };
-
-        Function {
-            bindings = <
-&none   &none          &none          &none          &none                              &kp F1  &kp F2   &kp F3   &kp F4   &kp LC(LG(P))
-&none   &kp LC(LG(S))  &none          &kp LC(LG(F))  &none          &none       &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none   &none          &kp LC(LG(C))  &kp LC(LG(V))  &kp LC(LG(B))  &none       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-&trans  &trans         &trans         &trans         &trans         &trans      &trans  &trans                             &trans
             >;
         };
 
