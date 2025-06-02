@@ -109,10 +109,10 @@
 
         Arrow {
             bindings = <
-&kp N1        &kp N2                    &kp N3             &kp N4                     &kp N5                                 &kp N6            &kp N7                  &kp N8                   &kp N9            &kp N0
-&kp C_VOL_DN  &kp LC(LG(LEFT_BRACKET))  &kp LC(LG(SPACE))  &kp LC(LG(RIGHT_BRACKET))  &kp C_VOLUME_UP  &trans      &kp HOME  &kp LEFT          &kp DOWN                &kp UP                   &kp RIGHT         &none
-&none         &none                     &kp LG(NUMBER_0)   &kp LG(MINUS)              &kp LG(EQUAL)    &trans      &kp END   &kp LG(NUMBER_1)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LG(NUMBER_9)  &none
-&trans        &trans                    &trans             &trans                     &trans           &trans      &trans    &trans                                                                               &trans
+&kp N1        &kp N2                    &kp N3             &kp N4                     &kp N5                                              &kp N6            &kp N7                  &kp N8                   &kp N9            &kp N0
+&kp C_VOL_DN  &kp LC(LG(LEFT_BRACKET))  &kp LC(LG(SPACE))  &kp LC(LG(RIGHT_BRACKET))  &kp C_VOLUME_UP  &kp SLASH              &kp PERIOD  &kp LEFT          &kp DOWN                &kp UP                   &kp RIGHT         &kp HOME
+&none         &none                     &kp LG(NUMBER_0)   &kp LG(MINUS)              &kp LG(EQUAL)    &kp LS(SEMICOLON)      &kp COMMA   &kp LG(NUMBER_1)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LG(NUMBER_9)  &kp END
+&trans        &trans                    &trans             &trans                     &trans           &trans                 &trans      &trans                                                                               &trans
             >;
         };
 
@@ -136,10 +136,10 @@
 
         Display {
             bindings = <
-&none   &kp LA(LC(N))      &kp LA(LC(C))      &kp LA(LC(E))      &kp LA(LC(M))                                              &kp LC(UP_ARROW)        &kp LC(LG(U))       &kp LC(LG(I))  &none                    &none
-&none   &kp LA(LC(T))      &kp LA(LC(S))      &kp LA(LC(B))      &kp LA(LC(F))      &kp LS(LC(LG(D)))      &kp LA(LC(TAB))  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(J))       &kp LC(LG(K))  &kp LC(LG(RIGHT_ARROW))  &none
-&none   &kp LS(LA(LC(F)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(P)))  &kp LS(LA(LC(D)))  &kp LS(LC(LG(J)))      &kp LC(LG(T))    &kp LC(LG(COMMA))       &kp LC(LG(PERIOD))  &none          &none                    &none
-&trans  &trans             &trans             &trans             &trans             &trans                 &trans           &kp LC(LG(ENTER))                                                                   &trans
+&none          &kp LA(LC(N))      &kp LA(LC(C))      &kp LA(LC(E))      &kp LA(LC(M))                                              &kp LC(UP_ARROW)        &kp LC(LG(U))       &kp LC(LG(I))  &none                    &none
+&kp LC(LG(A))  &kp LA(LC(T))      &kp LA(LC(S))      &kp LA(LC(B))      &kp LA(LC(F))      &kp LS(LC(LG(D)))      &kp LA(LC(TAB))  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(J))       &kp LC(LG(K))  &kp LC(LG(RIGHT_ARROW))  &none
+&none          &kp LS(LA(LC(F)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(P)))  &kp LS(LA(LC(D)))  &kp LS(LC(LG(J)))      &kp LC(LG(T))    &kp LC(LG(COMMA))       &kp LC(LG(PERIOD))  &none          &none                    &none
+&trans         &trans             &trans             &trans             &trans             &trans                 &trans           &kp LC(LG(ENTER))                                                                   &trans
             >;
         };
 
