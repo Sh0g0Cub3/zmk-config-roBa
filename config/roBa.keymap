@@ -71,6 +71,34 @@
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "CODE_BLOCK";
         };
+
+        parentheses: parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "PARENTHESES";
+        };
+
+        square_brackets: square_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "SQUARE_BRACKETS";
+        };
+
+        curly_braces: curly_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT_ARROW>;
+            label = "CURLY_BRACES";
+        };
+
+        at_mark: at_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp AT_SIGN>;
+            label = "AT_MARK";
+        };
     };
 
     behaviors {
@@ -118,10 +146,10 @@
 
         Symbol {
             bindings = <
-&kp LS(TILDE)         &kp LS(DLLR)      &kp LS(POUND)  &kp LS(AT)    &kp LS(EXCL)                                 &kp LS(LPAR)   &kp LS(RPAR)  &kp BSLH      &kp FSLH    &kp LS(COLON)
-&kp LS(PRCNT)         &kp LS(CARET)     &kp LS(AMPS)   &kp LS(STAR)  &kp LS(UNDER)  &kp GRAVE      &kp DOT        &kp LBKT       &kp RBKT      &kp LS(PIPE)  &none       &kp SEMI
-&kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp EQUAL      &kp LS(PLUS)  &kp MINUS      &trans         &kp COMMA      &kp LS(LBRC)   &kp LS(RBRC)  &kp LS(LT)    &kp LS(GT)  &kp LS(QMARK)
-&trans                &trans            &trans         &trans        &trans         &trans         &kp LA(ENTER)  &kp LS(ENTER)                                          &trans
+&kp LS(TILDE)         &kp LS(DLLR)      &kp LS(POUND)  &at_mark      &kp LS(EXCL)                                 &parentheses      &kp LS(RPAR)  &kp BSLH      &kp FSLH    &kp LS(COLON)
+&kp LS(PRCNT)         &kp LS(CARET)     &kp LS(AMPS)   &kp LS(STAR)  &kp LS(UNDER)  &kp GRAVE      &kp DOT        &square_brackets  &kp RBKT      &kp LS(PIPE)  &none       &kp SEMI
+&kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp EQUAL      &kp LS(PLUS)  &kp MINUS      &trans         &kp COMMA      &curly_braces     &kp LS(RBRC)  &kp LS(LT)    &kp LS(GT)  &kp LS(QMARK)
+&trans                &trans            &trans         &trans        &trans         &trans         &kp LA(ENTER)  &kp LS(ENTER)                                             &trans
             >;
         };
 
