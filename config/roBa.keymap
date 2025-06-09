@@ -34,11 +34,13 @@
         comma {
             bindings = <&kp COMMA>;
             key-positions = <30 31>;
+            layers = <0 2>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <31 32>;
+            layers = <0 2>;
         };
 
         question {
@@ -134,10 +136,10 @@
 
         Mouse {
             bindings = <
-&none   &none   &none   &none                  &kp LS(LG(T))                                   &kp LA(Y)              &none             &none             &none             &none
-&none   &none   &none   &kp LS(LA(LC(SPACE)))  &none          &none      &none                 &kp LA(NUMBER_1)       &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)
-&none   &none   &none   &none                  &none          &none      &none                 &kp LA(N)              &none             &none             &none             &none
-&trans  &trans  &trans  &none                  &none          &none      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &trans
+&none   &none   &none   &none                  &kp LS(LG(T))                                    &kp LA(Y)              &none             &none             &none             &none
+&none   &none   &none   &kp LS(LA(LC(SPACE)))  &none          &trans      &trans                &kp LA(NUMBER_1)       &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)
+&none   &none   &none   &none                  &none          &trans      &trans                &kp LA(N)              &none             &none             &none             &none
+&trans  &trans  &trans  &none                  &none          &none       &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &trans
             >;
         };
 
