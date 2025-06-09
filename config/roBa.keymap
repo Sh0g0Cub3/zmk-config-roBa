@@ -57,12 +57,6 @@
             bindings = <&code_block>;
             key-positions = <14 15>;
         };
-
-        screenshot {
-            bindings = <&kp LS(LG(NUMBER_3))>;
-            key-positions = <31 32>;
-            layers = <1>;
-        };
     };
 
     macros {
@@ -76,28 +70,28 @@
         code_block: code_block {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            bindings = <&kp LANGUAGE_2 &kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "CODE_BLOCK";
         };
 
         parentheses: parentheses {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LANGUAGE_2 &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "PARENTHESES";
         };
 
         square_brackets: square_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            bindings = <&kp LANGUAGE_2 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
             label = "SQUARE_BRACKETS";
         };
 
         curly_braces: curly_braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT_ARROW>;
+            bindings = <&kp LANGUAGE_2 &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT_ARROW>;
             label = "CURLY_BRACES";
         };
 
@@ -136,10 +130,10 @@
 
         Mouse {
             bindings = <
-&none   &none   &none   &none                  &kp LS(LG(T))                                    &kp LA(Y)              &none             &none             &none             &none
-&none   &none   &none   &kp LS(LA(LC(SPACE)))  &none          &trans      &trans                &kp LA(NUMBER_1)       &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)
-&none   &none   &none   &none                  &none          &trans      &trans                &kp LA(N)              &none             &none             &none             &none
-&trans  &trans  &trans  &none                  &none          &none       &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &trans
+&kp LS(LG(NUMBER_3))  &none   &none   &none                  &kp LS(LG(T))                                    &kp LA(Y)              &none             &none             &none             &none
+&none                 &none   &none   &kp LS(LA(LC(SPACE)))  &none          &trans      &trans                &kp LA(NUMBER_1)       &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)
+&none                 &none   &none   &none                  &none          &trans      &trans                &kp LA(N)              &none             &none             &none             &none
+&trans                &trans  &trans  &none                  &none          &none       &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &trans
             >;
         };
 
