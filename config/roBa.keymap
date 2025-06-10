@@ -16,11 +16,6 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
-        };
-
         esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
@@ -101,6 +96,13 @@
             bindings = <&kp LANG2 &kp AT_SIGN>;
             label = "AT_MARK";
         };
+
+        corner_brackets: corner_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &kp LBKT &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            label = "CORNER_BRACKETS";
+        };
     };
 
     behaviors {
@@ -132,7 +134,7 @@
             bindings = <
 &kp LS(LG(NUMBER_3))  &none   &none   &none                  &kp LS(LG(T))                                    &kp LA(Y)              &none             &none             &none             &none
 &none                 &none   &none   &kp LS(LA(LC(SPACE)))  &none          &trans      &trans                &kp LA(NUMBER_1)       &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)
-&none                 &none   &none   &none                  &none          &trans      &trans                &kp LA(N)              &none             &none             &none             &none
+&none                 &none   &none   &none                  &none          &trans      &trans                &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &none             &none             &none
 &trans                &trans  &trans  &none                  &none          &none       &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &trans
             >;
         };
@@ -148,19 +150,19 @@
 
         Symbol {
             bindings = <
-&kp LS(TILDE)         &kp LS(DLLR)      &kp LS(POUND)  &at_mark      &kp LS(EXCL)                                 &parentheses      &kp SQT      &kp BSLH      &kp FSLH    &kp LS(COLON)
-&kp LS(PRCNT)         &kp LS(CARET)     &kp LS(AMPS)   &kp LS(STAR)  &kp LS(UNDER)  &kp GRAVE      &kp DOT        &square_brackets  &kp LS(SQT)  &kp LS(PIPE)  &none       &kp SEMI
-&kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp EQUAL      &kp LS(PLUS)  &kp MINUS      &trans         &kp COMMA      &curly_braces     &none        &kp LS(LT)    &kp LS(GT)  &kp LS(QMARK)
-&trans                &trans            &trans         &trans        &trans         &trans         &kp LA(ENTER)  &kp LS(ENTER)                                            &trans
+&kp LS(TILDE)         &kp LS(DLLR)      &kp LS(POUND)  &at_mark      &kp LS(EXCL)                                 &parentheses      &kp SQT           &kp BSLH      &kp FSLH    &kp LS(COLON)
+&kp LS(PRCNT)         &kp LS(CARET)     &kp LS(AMPS)   &kp LS(STAR)  &kp LS(UNDER)  &kp GRAVE      &kp DOT        &square_brackets  &kp LS(SQT)       &kp LS(PIPE)  &none       &kp SEMI
+&kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp EQUAL      &kp LS(PLUS)  &kp MINUS      &trans         &kp COMMA      &curly_braces     &corner_brackets  &kp LS(LT)    &kp LS(GT)  &kp LS(QMARK)
+&trans                &trans            &trans         &trans        &trans         &trans         &kp LA(ENTER)  &kp LS(ENTER)                                                 &trans
             >;
         };
 
         Function {
             bindings = <
-&none   &none          &none          &none          &none                                                &kp F1         &kp F2   &kp F3   &kp F4   &kp LC(LG(P))
-&none   &kp LC(LG(S))  &none          &kp LC(LG(F))  &none          &none                  &none          &kp F5         &kp F6   &kp F7   &kp F8   &none
-&none   &none          &kp LC(LG(C))  &kp LC(LG(V))  &kp LC(LG(B))  &kp LS(LC(LG(B)))      &none          &kp F9         &kp F10  &kp F11  &kp F12  &none
-&trans  &trans         &trans         &trans         &trans         &trans                 &kp LG(SPACE)  &kp LA(SPACE)                             &trans
+&kp LC(LG(P))  &none          &none          &none          &none                                                &kp F1         &kp F2   &kp F3   &kp F4   &kp LC(LG(P))
+&none          &kp LC(LG(S))  &none          &kp LC(LG(F))  &none          &none                  &none          &kp F5         &kp F6   &kp F7   &kp F8   &none
+&none          &none          &kp LC(LG(C))  &kp LC(LG(V))  &kp LC(LG(B))  &kp LS(LC(LG(B)))      &none          &kp F9         &kp F10  &kp F11  &kp F12  &none
+&trans         &trans         &trans         &trans         &trans         &trans                 &kp LG(SPACE)  &kp LA(SPACE)                             &trans
             >;
         };
 
